@@ -1,0 +1,1 @@
+let actvie = document.querySelectorAlls;
