@@ -1,0 +1,836 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap");
+:root {
+  --background_theme: rgb(102, 46, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  color: rgba(0, 0, 0, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  width: 100%;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 150px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 99999;
+}
+body header .menu {
+  position: absolute;
+  margin-left: 25%;
+}
+body header input, body header label {
+  display: none;
+}
+body header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .nav-links li {
+  list-style: none;
+  margin-inline: 30px;
+}
+body header .nav-links li a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+body header .nav-links .active {
+  color: var(--background_theme);
+}
+body header span {
+  color: var(--background_theme);
+  font-size: 20px;
+}
+body header .contact-container a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  outline: 1px solid;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+body header .contact-container a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--background_theme);
+  border-radius: 50px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  z-index: -1;
+}
+body header .contact-container a:hover {
+  color: white;
+  outline: none;
+}
+body header .contact-container a:hover::before {
+  transform: scaleX(1);
+}
+body .hero-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  position: relative;
+}
+body .hero-container .custom-shape-divider-bottom-1681865753 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+  filter: blur(200px);
+}
+body .hero-container .custom-shape-divider-bottom-1681865753 svg {
+  position: relative;
+  display: block;
+  width: calc(143% + 1.3px);
+  height: 282px;
+  transform: rotateY(180deg);
+}
+body .hero-container .custom-shape-divider-bottom-1681865753 .shape-fill {
+  fill: var(--background_theme);
+}
+body .hero-container .left {
+  width: 100%;
+  padding: 120px 100px 120px 150px;
+  position: relative;
+}
+body .hero-container .left .background {
+  position: absolute;
+  background-image: linear-gradient(45deg, rgb(255, 128, 24), rgb(247, 194, 79));
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  z-index: -5;
+  right: 20px;
+}
+body .hero-container .left p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .hero-container .left h1 {
+  font-size: 60px;
+}
+body .hero-container .left h1 span {
+  color: var(--background_theme);
+}
+body .hero-container .left a {
+  padding: 15px 35px;
+  border-radius: 40px;
+  border: none;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  top: 40px;
+}
+body .hero-container .left .btn-left {
+  outline: 1px solid;
+  background-color: transparent;
+  position: relative;
+  margin-right: 10px;
+}
+body .hero-container .left .btn-left::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--background_theme);
+  border-radius: 40px;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  z-index: -1;
+}
+body .hero-container .left .btn-left:hover {
+  outline: none;
+  color: white;
+  box-shadow: 0px 2px 5px rgba(84, 84, 84, 0.5);
+}
+body .hero-container .left .btn-left:hover::before {
+  transform: scale(1);
+}
+body .hero-container .left .btn-right {
+  background-color: var(--background_theme);
+  color: white;
+  transition: box-shadow 0.1s ease;
+}
+body .hero-container .left .btn-right:hover {
+  box-shadow: 0px 2px 5px rgba(84, 84, 84, 0.5);
+}
+body .hero-container .left .social-media {
+  margin-top: 50px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .hero-container .left .social-media img {
+  width: 50px;
+  aspect-ratio: 1;
+  filter: box-shadow 0px 500px 100px black;
+}
+body .hero-container .right {
+  width: 100%;
+  position: relative;
+}
+body .hero-container .right img {
+  width: 86%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0;
+}
+body .hero-container .right .ui-designer {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 130px;
+  left: 60%;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgba(72, 72, 72, 0.034), 0 6.7px 5.3px rgba(99, 99, 99, 0.048), 0 12.5px 10px rgba(77, 77, 77, 0.06), 0 22.3px 17.9px rgba(69, 69, 69, 0.072), 0 41.8px 33.4px rgba(92, 92, 92, 0.086), 0 100px 80px rgba(63, 63, 63, 0.12);
+}
+body .hero-container .right .ui-designer span {
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  background-color: var(--background_theme);
+}
+body .hero-container .right .developer {
+  position: absolute;
+  top: 75%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-top: 0.2px solid rgba(131, 131, 131, 0.1);
+  border-left: 0.2px solid rgba(131, 131, 131, 0.1);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
+}
+body .hero-container .right .developer span {
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  background-image: linear-gradient(45deg, rgb(255, 128, 24), rgb(247, 194, 79));
+}
+body #about {
+  height: 840px;
+  display: flex;
+  justify-content: space-between;
+  padding: 300px;
+  align-items: center;
+  position: relative;
+}
+body #about .left-container {
+  border: 20px solid var(--background_theme);
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+body #about .left-container .dale {
+  position: absolute;
+  right: -60px;
+  width: 320px;
+}
+body #about .left-container .social-media {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  bottom: 0;
+  height: 100px;
+  justify-content: space-between;
+}
+body #about .left-container .social-media img {
+  cursor: pointer;
+}
+body #about .right-container {
+  width: 400px;
+  height: 500px;
+}
+body #experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 150px 100px 150px;
+  position: relative;
+}
+body #experience .experience {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+body #experience .fw-bold {
+  font-size: 40px;
+  color: var(--background_theme);
+  font-weight: 900;
+}
+body #experience .about-card {
+  border: 1px solid black;
+  height: 100%;
+  width: 48%;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 150px;
+}
+body #experience .about-card .card-top {
+  text-align: center;
+  font-size: 20px;
+  color: #2d2d2d;
+}
+body #experience .about-card .card-bot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px 0px 30px 70px;
+}
+body #experience .about-card .card-bot .left, body #experience .about-card .card-bot .right {
+  margin-top: 10px;
+}
+body #experience .about-card .card-bot .left .lists, body #experience .about-card .card-bot .right .lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline: 20px;
+  margin: 10px 0px;
+}
+body #experience .about-card .card-bot .left .lists .item, body #experience .about-card .card-bot .right .lists .item {
+  width: 90%;
+  margin: 10px 0px 10px 15px;
+}
+body #experience .about-card .card-bot .left .lists span, body #experience .about-card .card-bot .right .lists span {
+  font-weight: 600;
+  font-size: 18px;
+}
+body #experience .about-card .card-bot .left .lists i, body #experience .about-card .card-bot .right .lists i {
+  font-size: 20px;
+  margin-top: -17px;
+}
+body #experience .about-card .card-bot .left .lists p, body #experience .about-card .card-bot .right .lists p {
+  font-size: 13px;
+}
+body #portfolio {
+  height: 800px;
+}
+body #portfolio .portfolio-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body #portfolio .portfolio-header h4 {
+  font-size: 40px;
+  color: var(--background_theme);
+}
+body #portfolio .portfolio-header p {
+  font-size: 15px;
+}
+body #portfolio .portfolio-grid {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 4rem;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+body #portfolio .portfolio-grid .shadow {
+  box-shadow: 0px 2px 15px rgba(151, 151, 151, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+body #portfolio .portfolio-grid .project-one-card {
+  border-radius: 50px;
+  border: 1px solid rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body #portfolio .portfolio-grid .project-one-card .image-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body #portfolio .portfolio-grid .project-one-card .image-title .img-size {
+  background-color: red;
+  width: 80%;
+  height: 300px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+body #portfolio .portfolio-grid .project-one-card .image-title img {
+  width: 100%;
+  border-radius: 50px;
+}
+body #portfolio .portfolio-grid .project-one-card .image-title p {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+body #portfolio .portfolio-grid .project-one-card .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+body #portfolio .portfolio-grid .project-one-card .buttons a {
+  color: var(--background_theme);
+  text-decoration: none;
+  border: 1px solid rgb(53, 53, 53);
+  padding: 14px 30px;
+  margin-inline: 10px;
+  border-radius: 50px;
+}
+body #portfolio .portfolio-grid .project-two-card {
+  border-radius: 50px;
+  border: 1px solid rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body #portfolio .portfolio-grid .project-two-card .image-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body #portfolio .portfolio-grid .project-two-card .image-title .img-size {
+  width: 80%;
+  height: 300px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+body #portfolio .portfolio-grid .project-two-card .image-title img {
+  width: 100%;
+  border-radius: 50px;
+}
+body #portfolio .portfolio-grid .project-two-card .image-title p {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+body #portfolio .portfolio-grid .project-two-card .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+body #portfolio .portfolio-grid .project-two-card .buttons a {
+  color: var(--background_theme);
+  text-decoration: none;
+  border: 1px solid rgb(53, 53, 53);
+  padding: 14px 30px;
+  margin-inline: 10px;
+  border-radius: 50px;
+}
+body #portfolio .portfolio-grid .project-three-card {
+  border-radius: 50px;
+  border: 1px solid rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body #portfolio .portfolio-grid .project-three-card .image-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+body #portfolio .portfolio-grid .project-three-card .image-title .img-size {
+  width: 80%;
+  height: 300px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+body #portfolio .portfolio-grid .project-three-card .image-title img {
+  width: 100%;
+  border-radius: 50px;
+}
+body #portfolio .portfolio-grid .project-three-card .image-title p {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+body #portfolio .portfolio-grid .project-three-card .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+body #portfolio .portfolio-grid .project-three-card .buttons a {
+  color: var(--background_theme);
+  text-decoration: none;
+  border: 1px solid rgb(53, 53, 53);
+  padding: 14px 30px;
+  margin-inline: 10px;
+  border-radius: 50px;
+}
+body #contact {
+  margin-top: 200px;
+  padding: 100px;
+  overflow: hidden;
+}
+body #contact .contact-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+body #contact .contact-header .bar {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 170px;
+  height: 7px;
+  background-color: var(--background_theme);
+  border-radius: 10px;
+}
+body #contact .contact-header h2 {
+  font-size: 40px;
+}
+body #contact .contact-content {
+  display: flex;
+  position: relative;
+}
+body #contact .contact-content .background {
+  background-color: var(--background_theme);
+  width: 900px;
+  position: absolute;
+  bottom: -35rem;
+  aspect-ratio: 1;
+  left: -300px;
+  border-radius: 50%;
+  filter: blur(210px);
+}
+body #contact .contact-content .contact-left {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body #contact .contact-content .contact-left .card {
+  background-color: rgba(255, 255, 255, 0.382);
+  -webkit-backdrop-filter: blur(50px) s;
+          backdrop-filter: blur(50px) s;
+  width: 500px;
+  height: 200px;
+  padding: 30px;
+  border-radius: 5px;
+  border: 0.3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0.3px 4px 10px rgba(54, 54, 111, 0.252);
+  text-align: center;
+}
+body #contact .contact-content .contact-left h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+body #contact .contact-content .contact-left h4 span {
+  color: var(--background_theme);
+}
+body #contact .contact-content .contact-left h4 i {
+  color: rgb(25, 25, 25);
+}
+body #contact .contact-content .contact-left .number {
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+body #contact .contact-content .contact-left .email {
+  font-size: 30px;
+  color: var(--background_theme);
+  border: 1px solid var(--background_theme);
+  border-radius: 5px;
+}
+body #contact .contact-content .contact-right {
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  width: 50%;
+  float: right;
+  top: 0;
+  display: flex;
+  padding: 20px;
+}
+body #contact .contact-content .contact-right form {
+  width: 100%;
+  position: relative;
+}
+body #contact .contact-content .contact-right form .bar {
+  position: absolute;
+  height: 5px;
+  top: 45px;
+  left: 42%;
+  width: 120px;
+  height: 7px;
+  background-color: var(--background_theme);
+  border-radius: 10px;
+}
+body #contact .contact-content .contact-right form h3 {
+  font-size: 27px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+body #contact .contact-content .contact-right form input {
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+  border-radius: 60px;
+  margin: 15px 0px;
+}
+body #contact .contact-content .contact-right form input:focus {
+  outline: 2px solid var(--background_theme);
+}
+body #contact .contact-content .contact-right form .fname {
+  width: 49%;
+}
+body #contact .contact-content .contact-right form .email {
+  width: 49%;
+}
+body #contact .contact-content .contact-right form .message {
+  width: 100%;
+  float: right;
+}
+body #contact .contact-content .contact-right form button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  width: 150px;
+  border-radius: 60px;
+  border: none;
+  background-color: var(--background_theme);
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+body footer {
+  padding: 40px;
+}
+body footer p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    overflow-x: hidden;
+  }
+  body header, html header {
+    padding: 20px 20px;
+    width: 100%;
+  }
+  body header .logo, html header .logo {
+    font-size: 20px;
+  }
+  body header .logo span, html header .logo span {
+    font-size: 20px;
+  }
+  body header .nav-links, html header .nav-links {
+    display: flex;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    top: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 25vh;
+    transition: all 0.4s ease-in-out;
+    width: 50%;
+    right: -100%;
+    padding-bottom: 50px;
+  }
+  body header .nav-links li, html header .nav-links li {
+    font-size: 20px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  body header .nav-links li a, html header .nav-links li a {
+    color: white;
+  }
+  body header .contact-container, html header .contact-container {
+    display: none;
+  }
+  body header .menu, html header .menu {
+    display: block;
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+  }
+  body header .menu input, body header .menu label, html header .menu input, html header .menu label {
+    display: block;
+  }
+  body header .menu #check, html header .menu #check {
+    display: none;
+  }
+  body header .menu #check:checked ~ .nav-links, html header .menu #check:checked ~ .nav-links {
+    right: 0;
+  }
+  body .hero-container, html .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 0;
+  }
+  body .hero-container .left, html .hero-container .left {
+    padding: 20px;
+    margin-top: -100px;
+    margin-inline: 20px;
+  }
+  body .hero-container .left .better, html .hero-container .left .better {
+    display: none;
+  }
+  body .hero-container .left p, html .hero-container .left p {
+    text-align: center;
+  }
+  body .hero-container .left .background, html .hero-container .left .background {
+    width: 100px;
+  }
+  body .hero-container .left h1, html .hero-container .left h1 {
+    font-size: 40px;
+    margin-top: 0;
+    text-align: center;
+  }
+  body .hero-container .left .btn-left, html .hero-container .left .btn-left {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-left: 15%;
+  }
+  body .hero-container .left .btn-right, html .hero-container .left .btn-right {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  body .hero-container .right, html .hero-container .right {
+    background-color: red;
+    position: relative;
+  }
+  body .hero-container .right img, html .hero-container .right img {
+    width: 230px;
+    display: none;
+  }
+  body .hero-container .right .ui-designer, body .hero-container .right .developer, html .hero-container .right .ui-designer, html .hero-container .right .developer {
+    display: none;
+  }
+  body #about, html #about {
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body #about .left-container, html #about .left-container {
+    width: 90%;
+  }
+  body #about .left-container .dale, html #about .left-container .dale {
+    width: 200px;
+    position: absolute;
+    right: 0;
+  }
+  body #about .right-container, html #about .right-container {
+    padding: 35px;
+  }
+  body #about .right-container p, html #about .right-container p {
+    text-align: justify;
+  }
+  body #experience, html #experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 150px 0px;
+  }
+  body #experience .experience, html #experience .experience {
+    margin-top: 50px;
+  }
+  body #experience .about-card, html #experience .about-card {
+    margin: 10px 20px;
+    width: 90%;
+  }
+  body #experience .about-card .card-bot, html #experience .about-card .card-bot {
+    padding: 0;
+  }
+  body #portfolio .portfolio-header, html #portfolio .portfolio-header {
+    padding: 20px;
+  }
+  body #portfolio .portfolio-grid, html #portfolio .portfolio-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 400px;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+  body #portfolio .portfolio-grid .project-one-card, body #portfolio .portfolio-grid .project-two-card, body #portfolio .portfolio-grid .project-three-card, html #portfolio .portfolio-grid .project-one-card, html #portfolio .portfolio-grid .project-two-card, html #portfolio .portfolio-grid .project-three-card {
+    padding-top: 30px;
+  }
+  body #contact, html #contact {
+    margin-top: 60rem;
+    padding: 20px;
+  }
+  body #contact .contact-header, html #contact .contact-header {
+    margin-top: -20px;
+  }
+  body #contact .contact-content .contact-left .card, html #contact .contact-content .contact-left .card {
+    width: 100%;
+    height: 100%;
+  }
+  body #contact .contact-content .contact-left .card p, html #contact .contact-content .contact-left .card p {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
