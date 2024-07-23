@@ -10,6 +10,7 @@
 	box-sizing: border-box;
 	font-family: "Poppins";
 	color: rgba($color: #000000, $alpha: 0.8);
+	color: white;
 }
 html {
 	scroll-behavior: smooth;
@@ -17,7 +18,7 @@ html {
 body {
 	position: relative;
 	width: 100%;
-	background-color: rgba($color: #000000, $alpha: .5);
+	background-color: rgba($color: #000000, $alpha: 1);
 
 	//-------------------- HEADER ----------------------------
 	header {
@@ -27,9 +28,10 @@ body {
 		padding: 35px 150px;
 		position: sticky;
 		top: 0;
-		background-color: rgba($color: #fff, $alpha: 0.5);
+		background-color: rgba($color: #c1c1c1, $alpha: 0.2);
 		backdrop-filter: blur(15px);
 		z-index: 99999;
+		border-bottom: 1px solid rgba($color: white, $alpha: .1);
 
 		.menu {
 			position: absolute;
@@ -376,6 +378,7 @@ body {
 			border-radius: 20px;
 			padding: 20px;
 			margin-top: 150px;
+			border: 1px solid rgba($color: white, $alpha: .5);
 			
 			.card-top {
 				text-align: center;
@@ -461,7 +464,7 @@ body {
 
 			.project-one-card {
 				border-radius: 50px;
-				border: 1px solid rgb(53, 53, 53);
+				border: 1px solid rgba($color: white, $alpha: .5);
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -504,7 +507,7 @@ body {
 					a {
 						color: var(--background_theme);
 						text-decoration: none;
-						border: 1px solid rgb(53, 53, 53);
+						border: 1px solid rgba($color: white, $alpha: .5);
 						padding: 14px 30px;
 						margin-inline: 10px;
 						border-radius: 50px;
@@ -513,7 +516,7 @@ body {
 			}
 			.project-two-card {
 				border-radius: 50px;
-				border: 1px solid rgb(53, 53, 53);
+				border: 1px solid rgba($color: white, $alpha: .5);
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -554,7 +557,7 @@ body {
 					a {
 						color: var(--background_theme);
 						text-decoration: none;
-						border: 1px solid rgb(53, 53, 53);
+						border: 1px solid rgba($color: white, $alpha: .5);
 						padding: 14px 30px;
 						margin-inline: 10px;
 						border-radius: 50px;
@@ -563,7 +566,7 @@ body {
 			}
 			.project-three-card {
 				border-radius: 50px;
-				border: 1px solid rgb(53, 53, 53);
+				border: 1px solid rgba($color: white, $alpha: .5);
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -604,7 +607,7 @@ body {
 					a {
 						color: var(--background_theme);
 						text-decoration: none;
-						border: 1px solid rgb(53, 53, 53);
+						border: 1px solid rgba($color: white, $alpha: .5);
 						padding: 14px 30px;
 						margin-inline: 10px;
 						border-radius: 50px;
@@ -664,8 +667,8 @@ body {
 				position: relative;
 
 				.card {
-					background-color: rgba(255, 255, 255, 0.382);
-					backdrop-filter: blur(50px) s;
+					background-color: rgba($color: #c1c1c1, $alpha: 0.2);
+					backdrop-filter: blur(75px);
 					width: 500px;
 					height: 200px;
 					padding: 30px;
